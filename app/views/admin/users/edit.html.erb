@@ -1,0 +1,14 @@
+<% @page_title = "edit admin user: #{@user.name}" %>
+<section>
+<%= link_to("back to list", admin_users_path, :class => "back-link") %>
+
+<div class= "user edit">
+  <h2>edit Admin User</h2>
+  <%= form_for @user  do |f| %>
+    <%= render "form", {f: f} %>
+    <div class="form-bottons">
+      <%= submit_tag I18n.t "admin.category.updatesubmit" %>
+    </div>
+  <% end %>
+</div>
+</section>

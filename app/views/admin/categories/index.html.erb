@@ -1,0 +1,28 @@
+<% @page_tille = "Admin category list" %>
+
+<section>
+<div class="category list">
+  <h3>Admin Category</h3>
+
+  <%= link_to( I18n.t "admin.category.indextitle", new_admin_category_path , class: "action new") %>
+
+  <table class="listing" summary="Admin category list">
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Action</th>
+    </tr>
+    <% @categories.each do |category| %>
+    <tr class="<%= cycle("odd", "even") %>">
+      <td><%= category.name %></td>
+      <td><%= category.description %></td>
+      <td class="action">
+        <%= link_to("edit", { action: "edit", id: category.id}, class: "action edit") %>
+        <%= link_to("delete", { action: "destroy", id: category.id}, class: "action delete") %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+
+</div>
+</section>

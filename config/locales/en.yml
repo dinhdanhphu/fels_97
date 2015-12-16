@@ -62,3 +62,20 @@ en:
       title: "Framgia E-learning System"
   category:
     start: "start"
+  admin:
+    user:
+      create: "User created."
+      update: "Admin user updated."
+      destroy: "Admin user destroyed"
+      indextitle: "Add new admin user"
+      updatesubmit: "Update Admin user"
+      deletesubmit: "Delete Admin user"
+      createsubmit: "Create Admin user"
+    category:
+      create: "User created."
+      update: "Admin user updated."
+      destroy: "Admin user destroyed"
+      updatesubmit: "Update Admin Category"
+      indextitle: "Add new admin Category"
+      deletesubmit: "Delete Admin Category"
+      createsubmit: "Create Admin Category"

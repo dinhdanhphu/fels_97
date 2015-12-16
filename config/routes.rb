@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+  namespace :admin do
+  resources :users
+  resources :categories
+  end
+
   root 'static_pages#home'
   get 'home' => 'static_pages#home'
   get 'about' => 'static_pages#about'

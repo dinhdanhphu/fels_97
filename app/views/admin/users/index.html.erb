@@ -1,0 +1,28 @@
+<% @page_tille = "Admin users list" %>
+
+<section>
+<div class="user list">
+  <h2>Admin Users</h2>
+
+  <%= link_to( I18n.t "user.indextitle", new_admin_user_path , class: "action new") %>
+
+  <table class="listing" summary="Admin users list">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+    <% @users.each do |user| %>
+    <tr class="<%= cycle("odd", "even") %>">
+      <td><%= user.name %></td>
+      <td><%= mail_to(user.email) %></td>
+      <td class="action">
+        <%= link_to("edit", { action: "edit", id: user.id}, class: "action edit") %>
+        <%= link_to("delete", { action: "destroy", id: user.id}, class: "action destroy") %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+
+</div>
+</section>

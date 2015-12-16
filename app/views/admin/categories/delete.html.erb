@@ -1,0 +1,14 @@
+<% @page_title = "delete admin category: #{@category.name}" %>
+
+<%= link_to("back to list", admin_categories_path, class: "back-link") %>
+
+<div class= "category edit">
+  <h3>Delete Admin Category</h3>
+  <%= form_for(:category, url: {:action => "destroy", id: @category.id}) do %>
+    <p>Are you sure</p>
+    <p class="reference-name"><%= @categorys.name %></p>
+    <div class="form-bottons">
+      <%= submit_tag I18n.t "admin.category.deletesubmit" %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,14 @@
+<% @page_title = "create admin category" %>
+<section>
+<%= link_to("back to list", admin_categories_path, :class => "back-link") %>
+
+<div class= "category new">
+  <h3>Create Admin Category</h3>
+  <%= form_for(:category, :url => {action: "create"}) do |f| %>
+    <%= render "form", {f: f} %>
+    <div class="form-bottons">
+      <%= submit_tag I18n.t "admin.category.createsubmit" %>
+    </div>
+  <% end %>
+</div>
+</section>
